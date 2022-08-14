@@ -26,6 +26,6 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   resolve: {
-    extensions: [".esm.js", ".js", ".jsx"],
+    extensions: [".js", ".jsx"],
   },
 };
