@@ -247,16 +247,4 @@ import add from "./add.js";
 import at from "./at.js";
 import isNull from "./isNull.js";
 
-function hello(say) {
-  const a = 10;
-  return a + say;
-}
-function helloWorld() {
-  // ho-ha-ho
-  const a = 10;
-  hello();
-  const b = 20;
-  return a + b;
-}
-
-export { isNull, at, add, helloWorld };
+export { isNull, at, add };
