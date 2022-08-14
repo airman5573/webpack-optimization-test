@@ -1,17 +1,9 @@
-import { FaBeer } from "react-icons/fa";
-import { MdBeenhere } from "react-icons/md";
-import { BsFileArrowDown } from "react-icons/bs";
-import { AiFillAlert } from "react-icons/ai";
+import { A, B } from "./test.js";
 
 const App = () => {
-  return (
-    <div>
-      <FaBeer />
-      <MdBeenhere />
-      <BsFileArrowDown />
-      <AiFillAlert />
-    </div>
-  );
+  A();
+  B();
+  return <div></div>;
 };
 
 export default App;
