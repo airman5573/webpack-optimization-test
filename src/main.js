@@ -1,8 +1,3 @@
-import { isNull } from "./lodash";
+import "./is-number-polyfill";
 
-const a = window.localStorage.getItem("aa");
-if (isNull(a)) {
-  console.log("A is Null!");
-} else {
-  console.log("A is Not Null!");
-}
+console.log("Hello World");
