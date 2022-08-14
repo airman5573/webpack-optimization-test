@@ -16,5 +16,7 @@
     "webpack-cli": "^4.10.0",
     "webpack-merge": "^5.8.0"
   },
-  "sideEffects": false
+  "sideEffects": [
+    "./src/is-number-polyfill.js"
+  ]
 }
