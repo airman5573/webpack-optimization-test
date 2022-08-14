@@ -3,34 +3,29 @@ const { join } = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const entries = {
-  main: {
-    filename: "main.js",
-    import: join(__dirname, "../src/scripts/main.js"),
-  },
-};
-
-Object.keys(entries).forEach((page) => {
-  const htmlPlugin = new HtmlWebpackPlugin({
-    inject: true,
-    title: `${page} title`,
-    template: join(__dirname, `../public/${page}.html`),
-    filename: `${page}.html`,
-    chunks: [page],
-  });
-  plugins.push(htmlPlugin);
-});
-
 module.exports = {
-  entry: entries,
+  entry: join(__dirname, "../src/index.jsx"),
   output: {
     filename: "[name].bundle.js",
     path: join(__dirname, "../dist"),
-    publicPath: "/dist",
+    publicPath: "/",
   },
-  module: {},
-  plugins: [new CleanWebpackPlugin()],
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: join(__dirname, "../public/index.html"),
+    }),
+    new CleanWebpackPlugin(),
+  ],
   resolve: {
-    extensions: [".js"],
+    extensions: [".js", ".jsx"],
   },
 };
