@@ -5,4 +5,7 @@ module.exports = merge(common, {
   mode: "production",
   devtool: "none",
   plugins: [],
+  optimization: {
+    minimize: false,
+  },
 });

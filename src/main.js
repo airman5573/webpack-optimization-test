@@ -1,8 +1,4 @@
-import { isNull } from "./lodash";
+import { a, b } from "./utils";
 
-const a = window.localStorage.getItem("aa");
-if (isNull(a)) {
-  console.log("A is Null!");
-} else {
-  console.log("A is Not Null!");
-}
+console.log("a", a);
+console.log("b", b);
