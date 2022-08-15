@@ -6,5 +6,8 @@ module.exports = merge(common, {
   plugins: [],
   optimization: {
     minimize: false,
+    usedExports: true,
+    providedExports: true,
+    sideEffects: true,
   },
 });

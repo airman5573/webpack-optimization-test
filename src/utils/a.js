@@ -1,1 +1,4 @@
-export const a = "a";
+export const a = () => {
+  console.log("a");
+  return 10;
+};
